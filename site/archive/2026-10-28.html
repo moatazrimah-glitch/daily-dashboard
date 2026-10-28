@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Dashboard</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f6f7f9; --panel: #ffffff; --border: rgba(15, 23, 42, .09);
+    --text: #1a2230; --muted: #5b6572; --accent: #2563eb;
+    --quote-bg: rgba(120, 100, 60, .07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151a; --panel: #1b2027; --border: rgba(255, 255, 255, .09);
+      --text: #e8eaed; --muted: #9aa4b1; --accent: #60a5fa;
+      --quote-bg: rgba(220, 190, 130, .08);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 36px 20px 48px; }
+  .kicker { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  header h1 { font-size: 26px; margin: 4px 0 6px; }
+  .edition { color: var(--muted); font-size: 14px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 26px 0 18px; }
+  .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .stat .label { font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .stat .value { font-size: 26px; font-weight: 600; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .stat .context { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  section { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin: 0 0 16px; }
+  section h2 { font-size: 15px; margin: 0 0 4px; }
+  section .sub { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  ul.headlines { list-style: none; margin: 0; padding: 0; }
+  ul.headlines li { padding: 9px 0; border-top: 1px solid var(--border); font-size: 14.5px; line-height: 1.5; }
+  ul.headlines li:first-child { border-top: 0; }
+  ul.headlines a { color: var(--accent); text-decoration: none; }
+  ul.headlines a:hover { text-decoration: underline; }
+  .src { font-size: 12px; color: var(--muted); }
+  h3.group { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 16px 0 2px; }
+  h3.group:first-of-type { margin-top: 0; }
+  .quotebox { background: var(--quote-bg); border-radius: 10px; padding: 16px 18px; margin-top: 6px; }
+  .quotebox .quote { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 18px; line-height: 1.55; }
+  .quotebox .author { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .quotebox .meaning { font-size: 14px; line-height: 1.55; margin: 0; }
+  ul.history { list-style: none; margin: 0; padding: 0; font-size: 13.5px; }
+  ul.history li { padding: 8px 0; border-top: 1px solid var(--border); color: var(--muted); }
+  ul.history li:first-child { border-top: 0; color: var(--text); }
+  ul.history b { font-variant-numeric: tabular-nums; }
+  .note { font-size: 12.5px; color: var(--muted); text-align: center; margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Daily dashboard report</div>
+    <h1>Daily Dashboard</h1>
+    <div class="edition">Wednesday, October 28, 2026 · Morocco &amp; world politics, science &amp; philosophy, Marrakech weather · built automatically on GitHub Pages</div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="label">Marrakech now</div><div class="value">29°C</div><div class="context">Overcast </div></div>
+    <div class="stat"><div class="label">News items</div><div class="value">15</div><div class="context">collected this run</div></div>
+    <div class="stat"><div class="label">Science stories</div><div class="value">6</div><div class="context">latest published</div></div>
+    <div class="stat"><div class="label">Quote of the day</div><div class="value">&#10003;</div><div class="context">Seneca</div></div>
+  </div>
+
+  <section>
+<h2>Politics — Morocco</h2>
+<p class="sub">Latest from the live feed, collected today.</p>
+<h3 class="group">Morocco World News</h3>
+<ul class="headlines"><li>Feed unavailable today. — <span class="src">via <a href="https://www.moroccoworldnews.com/feed">Morocco World News</a></span></li></ul>
+</section>
+<section>
+<h2>Politics — World</h2>
+<p class="sub">Latest from the live feed, collected today.</p>
+<h3 class="group">The Guardian</h3>
+<ul class="headlines"><li><a href="https://www.theguardian.com/world/2026/oct/28/egypt-lina-attalah-mada-masr-press-freedom-clampdown">Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr</a> — <span class="src">via <a href="https://www.theguardian.com/world/rss">The Guardian</a></span></li>
+<li><a href="https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says-top-health-official">Africa’s ‘unprecedented’ Ebola outbreak could reach UK, says top health official</a> — <span class="src">via <a href="https://www.theguardian.com/world/rss">The Guardian</a></span></li>
+<li><a href="https://www.theguardian.com/global-development/2026/oct/26/uk-sanctions-sudanese-military-leaders-implicated-in-el-fasher-campaign-of">UK sanctions Sudanese military leaders implicated in El Fasher ‘campaign of rape’</a> — <span class="src">via <a href="https://www.theguardian.com/world/rss">The Guardian</a></span></li></ul>
+<h3 class="group">BBC</h3>
+<ul class="headlines"><li><a href="https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&amp;at_campaign=rss">Luxury cruise passengers stranded in Cambodia due to soaring fuel costs</a> — <span class="src">via <a href="https://feeds.bbci.co.uk/news/world/rss.xml">BBC</a></span></li>
+<li><a href="https://www.bbc.co.uk/news/articles/ck5ynj4eeyj2o?at_medium=RSS&amp;at_campaign=rss">Serbian shot dead after attacking officer outside Israeli embassy, minister says</a> — <span class="src">via <a href="https://feeds.bbci.co.uk/news/world/rss.xml">BBC</a></span></li>
+<li><a href="https://www.bbc.co.uk/news/articles/c5m2dry2xwwvo?at_medium=RSS&amp;at_campaign=rss">Tanzania celebrates first natural gas discovery in more than 10 years</a> — <span class="src">via <a href="https://feeds.bbci.co.uk/news/world/rss.xml">BBC</a></span></li></ul>
+</section>
+<section>
+<h2>Science — latest</h2>
+<p class="sub">Latest from the live feed, collected today.</p>
+<h3 class="group">BBC Science</h3>
+<ul class="headlines"><li><a href="https://www.bbc.co.uk/news/articles/c5vgj8xwyj1zo?at_medium=RSS&amp;at_campaign=rss">Weather warning lifted as third storm to hit Scotland eases off</a> — <span class="src">via <a href="https://feeds.bbci.co.uk/news/science_and_environment/rss.xml">BBC Science</a></span></li>
+<li><a href="https://www.bbc.co.uk/news/articles/cq0megg87n3po?at_medium=RSS&amp;at_campaign=rss">Will a new strategy help protect Northern Ireland&#x27;s nature?</a> — <span class="src">via <a href="https://feeds.bbci.co.uk/news/science_and_environment/rss.xml">BBC Science</a></span></li>
+<li><a href="https://www.bbc.co.uk/news/articles/cmx28de233r2o?at_medium=RSS&amp;at_campaign=rss">Nanotyrannus skeleton sells for $47.3m in New York auction</a> — <span class="src">via <a href="https://feeds.bbci.co.uk/news/science_and_environment/rss.xml">BBC Science</a></span></li></ul>
+<h3 class="group">ScienceDaily</h3>
+<ul class="headlines"><li><a href="https://www.sciencedaily.com/releases/2026/10/261027231021.htm">A single sauna session sends immune cells surging through your body</a> — <span class="src">via <a href="https://www.sciencedaily.com/rss/all.xml">ScienceDaily</a></span></li>
+<li><a href="https://www.sciencedaily.com/releases/2026/10/261027230715.htm">A simple daily fiber supplement reduced arthritis pain and improved strength</a> — <span class="src">via <a href="https://www.sciencedaily.com/rss/all.xml">ScienceDaily</a></span></li>
+<li><a href="https://www.sciencedaily.com/releases/2026/10/261027063824.htm">The autistic brain processes faces differently than scientists thought</a> — <span class="src">via <a href="https://www.sciencedaily.com/rss/all.xml">ScienceDaily</a></span></li></ul>
+</section>
+<section>
+<h2>Philosophy</h2>
+<p class="sub">Latest from the live feed, collected today.</p>
+<h3 class="group">Daily Nous</h3>
+<ul class="headlines"><li><a href="https://dailynous.com/2026/10/28/underrepresentation-of-non-native-english-speakers-in-philosophy-findings-from-over-100000-papers-guest-post/">Underrepresentation of Non-Native English Speakers in Philosophy: Findings from over 100,000 Papers (guest post)</a> — <span class="src">via <a href="https://dailynous.com/feed/">Daily Nous</a></span></li>
+<li><a href="https://dailynous.com/2026/10/28/mini-heap-734/">Mini-Heap</a> — <span class="src">via <a href="https://dailynous.com/feed/">Daily Nous</a></span></li>
+<li><a href="https://dailynous.com/2026/10/27/new-oxford-studies-in-philosophy-of-ai-and-computing/">New: Oxford Studies in Philosophy of AI and Computing</a> — <span class="src">via <a href="https://dailynous.com/feed/">Daily Nous</a></span></li></ul>
+</section>
+
+  <section>
+    <h2>Marrakech weather</h2>
+    <p class="sub">Live conditions at build time.</p>
+    <ul class="headlines"><li>29°C (feels like 27°C) · Overcast  · Humidity 26% · Wind 5 km/h N · Sunrise 07:45 AM · Sunset 06:46 PM. <span class="src">— <a href="https://wttr.in/Marrakech">wttr.in</a></span></li></ul>
+  </section>
+
+  <section>
+<h2>Philosophy quote of the day</h2>
+<p class="sub">One quote to learn about, every day.</p>
+<div class="quotebox">
+<p class="quote">&ldquo;We suffer more often in imagination than in reality.&rdquo;</p>
+<div class="author">— Seneca, Letters to Lucilius, XIII</div>
+<p class="meaning">Most of our fears never arrive; the mind rehearses disasters that never happen. Learning to notice that gap between imagined and actual pain is the beginning of Stoic calm.</p>
+</div>
+</section>
+
+  <section>
+    <h2>History</h2>
+    <p class="sub">One line per daily edition, most recent first (last 7 kept).</p>
+    <ul class="history"><li>2026-10-28 — 15 items collected, Marrakech 29°C overcast </li>
+<li>2026-10-27 — 15 items collected, Marrakech 23°C overcast </li>
+<li>2026-10-27 — 15 items collected, Marrakech 23°C overcast </li>
+<li>2026-10-27 — 15 items collected, Marrakech 19°C overcast </li></ul>
+  </section>
+
+  <div class="note">Built automatically by GitHub Actions · runs daily at 10:00 Morocco time · every edition is also kept in the archive and in the git history</div>
+</div>
+</body>
+</html>
